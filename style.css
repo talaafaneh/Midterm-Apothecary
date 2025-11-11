@@ -17,6 +17,7 @@ nav a{
     color: #E7A748;
     margin-left: 1.5rem;
     margin-right: 2rem;
+    font-size: 1.5rem;
 }
 
 #title{
@@ -33,4 +34,6 @@ font-family: Zen Antique Soft,serif;
 }
 #paragraph1{
     margin-top: -3.5rem;
+    font-size: 2rem;
+    color: #D8D0BC;
 }
