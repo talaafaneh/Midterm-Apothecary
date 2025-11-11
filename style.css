@@ -7,3 +7,6 @@ header{
     align-items: center;            /* Vertically centers both */
 }
 
+#MainText{
+    text-align: left;
+}
