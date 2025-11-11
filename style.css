@@ -18,6 +18,11 @@ nav a{
     margin-left: 1.5rem;
     margin-right: 2rem;
     font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: #D8D0BC;
 }
 
 #title{
@@ -33,7 +38,7 @@ font-family: Zen Antique Soft,serif;
     margin-left: 1.5rem;
 }
 #paragraph1{
-    margin-top: -3.5rem;
+    margin-top: -3rem;
     font-size: 2rem;
     color: #D8D0BC;
 }
@@ -46,4 +51,8 @@ h3 a{
     padding: 0.3rem 0.8rem;
     text-decoration: none;
     font-family: Nunito, sans-serif;
+    transition: background 0.5s; 
+}
+h3 a:hover{
+    background-color: #230f02;
 }
