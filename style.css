@@ -4,10 +4,14 @@ body{
 
 header{ 
     font-family: Zen Antique Soft, serif;
+    color: #E7A748;
     display: flex;
     justify-content: space-between; /* Puts h1 left, nav right */
     align-items: center;            /* Vertically centers both */
+    background-color: #230f02;
 }
+
+nav a{color: #E7A748;}
 
 #title{
 font-family: Zen Antique Soft,serif;
