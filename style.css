@@ -1,12 +1,19 @@
 body{
+    font-family: Zen Antique Soft,serif;
     text-align: center;}
 
 header{ 
+    font-family: Zen Antique Soft, serif;
     display: flex;
     justify-content: space-between; /* Puts h1 left, nav right */
     align-items: center;            /* Vertically centers both */
 }
 
-#MainText{
+#title{
+font-family: Zen Antique Soft,serif;
+}
+
+.MainText{
     text-align: left;
+    font-family: Nunito;
 }
