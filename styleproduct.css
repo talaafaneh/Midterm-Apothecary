@@ -4,6 +4,9 @@ nav{
     background-color: #230f02;
     text-align: center;
 }
+.fa-solid{
+    margin-right: 1rem;
+}
 nav a{
     color: #E7A748;
     margin-left: 1.5rem;
@@ -11,3 +14,19 @@ nav a{
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s ease;}
+    body{
+        background-color: #D8D0BC;
+    }
+    h1{
+        font-size: 3.5rem;
+        font-family: Zen Antique Soft,serif;
+        text-align: center;
+        color: #230f02;
+    }
+p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Nunito;
+    margin-top: -2rem;
+    color: #230f02;
+}
