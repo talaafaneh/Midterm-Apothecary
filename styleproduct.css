@@ -17,6 +17,9 @@ nav a{
     body{
         background-color: #D8D0BC;
     }
+    nav a:hover{
+    color: #D8D0BC;
+}
     h1{
         font-size: 3.5rem;
         font-family: Zen Antique Soft,serif;

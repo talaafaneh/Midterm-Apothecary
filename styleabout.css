@@ -10,6 +10,9 @@ nav{
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s ease;}
+    nav a:hover{
+    color: #D8D0BC;
+}
     body{
         background-color: #D8D0BC;
     }
