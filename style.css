@@ -29,6 +29,7 @@ nav{
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-right: 1rem;
     align-items: center;
     font-family: Zen Antique Soft, serif;
     color: #E7A748;
@@ -84,4 +85,7 @@ main{
     font-family: Nunito;
     margin-top: -2rem;
     color: #230f02;
+}
+#hero-image{
+display: flex;
 }
