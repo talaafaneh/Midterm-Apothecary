@@ -86,6 +86,20 @@ main{
     margin-top: -2rem;
     color: #230f02;
 }
+.MainText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.this{
+    max-width: 50%;
+}
 #hero-image{
-display: flex;
+    height: 100%;
+    width: auto;
+    max-width: 50%;
+    object-fit: cover;
 }
