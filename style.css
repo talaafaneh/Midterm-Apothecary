@@ -49,7 +49,7 @@ nav a:hover{
  font-family: Zen Antique Soft,serif;
  color: #E7A748;
  font-size: 4rem;
- margin-right: none;
+ margin-top: -8rem;
 }
 
 .MainText{
@@ -106,4 +106,14 @@ main{
 #hero-image img {
     width: 50%;
     height: auto;
+    /* Fade edges to the site background color */
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
 }
