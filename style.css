@@ -79,6 +79,20 @@ h3 a{
 h3 a:hover{
     background-color: #230f02;
 }
+#contact{
+color: #D8D0BC;
+}
+.contact{
+color: #D8D0BC;
+font-size: 1rem;
+text-decoration: none;
+}
+.contact a{
+    color: #8D2335;
+}
+.contact a:hover{
+    color: #E7A748;
+}
 #promotion{
     margin-top: 15rem;
 }
