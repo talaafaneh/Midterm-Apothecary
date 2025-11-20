@@ -77,7 +77,8 @@ h3 a{
     margin-left: 2rem;
 }
 h3 a:hover{
-    background-color: #230f02;
+    color: #230f02;
+    background-color: #D8D0BC;
 }
 #contact{
 color: #D8D0BC;
