@@ -194,3 +194,11 @@ main{
   height: auto;
   border-radius: 10px; 
 }
+
+footer {
+    font-family: Zen Antique Soft,serif;
+    text-align: center;
+    background-color: #230f02;
+    color: #D8D0BC;
+    margin-bottom: -1rem;
+}
