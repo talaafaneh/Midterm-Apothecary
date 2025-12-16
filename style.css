@@ -32,6 +32,7 @@ nav{
     display: flex;
     justify-content: center;
     gap: 2rem;
+    padding: 2rem;
     align-items: center;
     font-family: Zen Antique Soft, serif;
     color: #E7A748;
@@ -196,9 +197,15 @@ main{
 }
 
 footer {
+    max-height: 150px;
     font-family: Zen Antique Soft,serif;
     text-align: center;
-    background-color: #230f02;
+    background-color: #0c0501;
     color: #D8D0BC;
-    margin-bottom: -1rem;
+    margin:none;
+    /* Sticky Footer */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
