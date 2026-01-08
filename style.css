@@ -109,27 +109,51 @@ main{
     margin-top: -2rem;
     color: #230f02;
 }
+/* Parent container that contains video plus text */
 .MainText {
+    /* added this to be able to adjust the video incase positioning is wrong */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* added 100vh to make it fill the viewport */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
+    overflow: hidden; 
+    /* so no content overflows down, stays clean */
+    /* OLD CODE */
+    /* justify-content: space-between;
+    padding: 40px 0; */
 }
 
-/* Hero image container */
+/* Hero image container will be the background layer behind the text */
 #hero-image {
-    width: 45%;
+    position: absolute;
+    /* i want it fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* to fill screen */
+    z-index: -1; /* Pushes video behind the text, like layers in adobe */
+    /* OLD CODE */
+    /* width: 45%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
-
+/* Makes the video fill the screen without stretching */
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio to cover up the background */
+}
+/* OLD CODE */
 /* The actual image */
-#hero-image img {
+/* #hero-image img {
     width: 80%;
-    height: auto;
+    height: auto; */
     /* Fade edges to the site background color */
-    mask-image: linear-gradient(
+    /* mask-image: linear-gradient(
         to right,
         transparent 0%,
         black 20%,
@@ -138,7 +162,9 @@ main{
     );
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
-}
+} */
+
+
 /* Cards styling on products page */
 
 .grid {
