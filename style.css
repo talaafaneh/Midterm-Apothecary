@@ -68,6 +68,53 @@ Any children inside the carousel with position:absolute will be positioned relat
     margin-bottom: 3rem;
    
 }
+#exclusive{
+    font-family: Zen Antique Soft,serif;
+ color: #E7A748;
+ font-size: 4rem;
+ margin-left: 10rem;
+    font-size: 4rem;
+    z-index: 2; /* Ensures text stays on top */
+ font-family: Zen Antique Soft,serif;
+}
+
+.promotion2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.indulge img {
+    width: 100%;
+    max-width: fit-content; 
+    height: auto;
+    
+    /* This creates the specific curve from your image */
+    border-top-left-radius: 50% 100%; 
+    
+    /* Ensures the image fills the area properly */
+    object-fit: cover; 
+    display: block;
+}
+h5 a{
+    font-size: 1.5rem;
+    color: #D8D0BC;
+    display: flex; 
+    background-color: #8D2335;
+    border-radius: 1rem; 
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    font-family: Nunito, sans-serif;
+    transition: background 0.5s; 
+}
+h5 a:hover{
+    color: #230f02;
+    background-color: #D8D0BC;
+}
+.promotionwords{
+    flex: 1;
+    text-align: left;
+
+}
 /* 1. The Container that hides the "off-screen" images */
 .carousel-window {
     width: 100%;
