@@ -13,7 +13,11 @@ body{
     /* This keeps the image inside the container box */
     position: relative;  
     background: linear-gradient(179deg, #A54A14 6.86%, #3F1C08 98.79%);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
     width: 100%;
+
     min-height: 100vh;
     font-family: Zen Antique Soft, serif;
     color: #E7A748;
@@ -33,6 +37,17 @@ body{
     color: #E7A748;
     font-size: 4rem;
     padding-top: 40rem; */
+}
+.carousel {
+    display: flex;
+    gap: 30px;         
+      /* Space between the cards */
+    width: 100%;
+}
+.card img {
+      width: 100%;
+      height: auto;
+      display: block;
 }
 .floating-visual {
     /*  Removes the image from the normal flow */
