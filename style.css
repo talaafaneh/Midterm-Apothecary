@@ -376,15 +376,10 @@ main{
   height: auto;
   border-radius: 10px; 
 }
+/* .............. */
+/* FOOTER SECTION */
+/* .............. */
 
-/* footer {
-font-family: "Zen Antique Soft", serif;
-  text-align: center;
-  background-color: #0c0501;
-  color: #D8D0BC;
-  margin: 0;
-  width: 100%;
-} */
 footer {
     background-color: #0c0501; 
     color: #D8D0BC;
@@ -450,3 +445,59 @@ footer {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+/* ................ */
+/* OUR JOURNEY PAGE */
+/* ................ */
+.OurJourney{
+  font-family: 'Zen Antique Soft', serif;
+  margin-top: 3rem;
+  margin-bottom: 1rem;  
+  padding: 0%;
+}
+.Journeycontainer{
+    display: grid;
+    text-align: center;
+    padding: 0%;
+    margin: 4%;
+}
+.OJ {
+    margin: 0%;
+}
+/* Image Styling */
+.image-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+
+.image-collage img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* Left image */
+/* :nth-child, new concept, basically because i want to overlap it will select first child element in the container, pseudo-class to select by postion not class or element */
+.image-collage img:nth-child(1) {
+  grid-column: 1 / 2;
+  /* start at line 1, end at line 2 */
+}
+
+/* Center image (taller + overlaps) */
+.image-collage img:nth-child(2) {
+  grid-column: 2 / 3;
+  transform: translateY(40px);
+  z-index: 2;
+  /* layers element on top */
+  height: 480px;
+}
+
+/* Right image */
+.image-collage img:nth-child(3) {
+  grid-column: 3 / 4;
+}
+
