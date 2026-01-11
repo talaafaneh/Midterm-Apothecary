@@ -500,4 +500,58 @@ footer {
 .image-collage img:nth-child(3) {
   grid-column: 3 / 4;
 }
+/* ......... */
+/* FAQ PAGE */
+/* ......... */
+.FAQBODY {
+    background-color: #8D2335;
+}
+.faq {
+  margin-top: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-bottom: 4rem;
+}
+
+/* Question buttons */
+.faq-question {
+  margin-right: 35rem;
+  margin-left: 35rem;
+  color: #000;
+  background: #D8D0BC;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+}
+/* to hide the checkbox */
+.faq-item input {
+  display: none;
+}
+
+/* this is the clickable question */
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* this will hide answers by default */
+.faq-item div[class^="faq-overlay"] {
+  display: none;
+  margin-top: 0.5rem; 
+  /* Limits the width so my lines aren't too long */
+  max-width: 600px; 
+
+  /* Centers the answer */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+/* shows the answer when checked */
+.faq-item input:checked ~ div[class^="faq-overlay"] {
+  display: block;
+}
 
