@@ -312,9 +312,15 @@ main{
 .grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 2rem;
+    gap: 5rem;
+    padding-top: 2rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
     margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     justify-content: space-around;
+    background: linear-gradient(to bottom, #52131E, #D9A441);
     
 }
 .card{
