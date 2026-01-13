@@ -17,28 +17,34 @@
     />
   </head>
   <body class="Lightbg">
-    <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="#contact">Contact</a>
-        <!-- checkbox hack for the "search bar", not real just to give an idea-->
-        <div class="search-wrapper">
-    <input type="checkbox" id="search-trigger" class="search-checkbox">
-    
-    <div class="search-box">
-        <input type="text" placeholder="Search...">
-    </div>
+    <header class="index">
+        <h1 class="logo"><img src="images/Attarlogo.svg" alt="AttarLogo"></h1>
 
-    <label for="search-trigger" class="search-icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </label>
-</div>
-        <!-- Search -->
-        <i class="fa-solid fa-cart-shopping"></i>
-        <!-- Cart -->
-      </nav>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="#contact">Contact</a>
+
+            <div class="search-wrapper">
+                <input type="checkbox" id="search-trigger" class="search-checkbox">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <label for="search-trigger" class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </div>
+
+            <i class="fa-solid fa-cart-shopping" style="color: #E7A748; cursor: pointer;"></i>
+        </nav>
     </header>
     <main>
       <h1 class="HeadTitle">Our Curated Blends</h1>

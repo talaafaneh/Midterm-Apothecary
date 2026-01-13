@@ -372,7 +372,9 @@ main{
     padding-bottom: 4rem;
     margin: 1rem;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
     justify-content: space-around;
     background: linear-gradient(to bottom, #52131E, #D9A441);
     
@@ -435,6 +437,15 @@ main{
   width: 300px;       
   height: auto;
   border-radius: 10px; 
+  
+}
+
+.bottom-decor {
+    width: 100%;           
+    max-width: 800px;      
+    height: auto;                 
+    margin: 0 auto;        
+    pointer-events: none;  
 }
 /* .............. */
 /* FOOTER SECTION */
@@ -702,10 +713,479 @@ footer {
 .buy-btn { background: #8D2335; color: #D8D0BC; }
 .buy-btn:hover { background: #3F1C08; }
 
+/* hamburger menu*/
+
+/* This line forces the hamburger to be INVISIBLE on desktop */
+.nav-toggle, 
+.nav-toggle-label {
+    display: none; 
+}
+
+/* This line forces the Links to be VISIBLE on desktop */
+header nav {
+    display: flex; 
+}
+
 /* .................... */
 /* Media QUERIES */
 /* ................... */
-/* =======================================================
-   MASTER MOBILE MEDIA QUERY (iPhone & Small Screens)
-   ======================================================= */
-@media (max-width: 767px){}
+@media (max-width: 767px){
+    /* INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX */
+    /* --- MOBILE HEADER & MENU --- */
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        overflow-x: hidden; /* Preventing side-scrolling */
+        width: 100%;
+    }
+
+    /* --- 2. HEADER & HAMBURGER MENU --- */
+    header.index {
+        padding: 1rem 1.5rem;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; 
+    }
+
+    .logo img {
+        width: 70px; /* Resizes logo for mobile */
+    }
+/* HAMBURGER MENU ICON */
+    
+    .nav-toggle-label {
+        display: flex ;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        order: 2; /* Ensures it stays on the right */
+    }
+    
+    .nav-toggle-label span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #E7A748;
+        border-radius: 3px;
+        transition: all 0.3s;
+    }
+
+    /* Hides the Nav Links initially */
+    header nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: #0c0501;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-top: 1px solid rgba(231, 167, 72, 0.2);
+        order: 3;
+    }
+
+    header nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Open Menu animation */
+    .nav-toggle:checked ~ nav {
+        display: flex;
+    }
+/* Animates hamburger into an X , help from AI*/
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+    /* HAMBURGER MENU ICON */
+
+    /* --- 3. HERO SECTION (Rediscover the Art) --- */
+    .MainText {
+        height: auto; 
+        min-height: 55vh; /* Fill most of the screen */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center;     /* Center horizontally */
+        text-align: center;
+    }
+
+    .this {
+        padding: 0 1.5rem;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #title {
+        font-size: 2.5rem ; /* Smaller title */
+        margin-left: 0 ;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 8px #000; 
+    }
+
+    #paragraph1 {
+        font-size: 1.2rem !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 2rem;
+    }
+    h1 {margin-left: 0;
+    font-size: 1.1rem;}
+
+    h3 { text-align: center; }
+    h3 a {
+        margin-left: 0 !important;
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    h5 a {
+       font-size: 1.1rem; 
+    }
+
+    /* --- 4. PROMOTION SECTION (Indulge in Experience) --- */
+    #promotion {
+        padding-top: 5rem ; /* CRITICAL: i Removed the 40rem gap */
+        min-height: auto;
+    }
+
+    #promotion h4 {
+        font-size: 2.2rem;
+        text-align: center;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .floating-visual {
+        position: relative; /* Stops floating */
+        transform: none;
+        left: 0; top: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+        opacity: 0.6;
+    }
+
+    /* Adjusted Carousel for Mobile */
+    .carousel-track {
+        width: calc(200px * 12); 
+    }
+    .card {
+        max-width: 200px;
+    }
+    .card img {
+        height: 250px;
+    }
+
+    /*HISTORIC METHODS & INDULGE --- */
+    .promotion2 {
+        flex-direction: column; /* Stack vertically */
+        padding: 3rem 0;
+        align-items: center;
+    }
+
+    .promotionwords {
+        text-align: center;
+        padding: 0 1.5rem;
+        margin-bottom: 3rem; /* Space between text and image */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #exclusive {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    /* The Image Section */
+    .indulge {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .indulge img {
+        object-fit: fill;
+        width: 90%; /* Fit screen with a small margin */
+        height: auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    /* FOOTER */
+    .footer-container {
+        display: flex ;
+        flex-direction: row ; /* Forces the side-by-side layout */
+        justify-content: space-between; /* Spreads them out */
+        align-items: flex-start;
+        padding: 2rem 0.5rem; /* Small padding on sides */
+        gap: 5px; /* Tiny gap to prevent squishing */
+    }
+
+    /* i Reset the widths so they share space */
+    .footer-column {
+        flex: 1; /* Each column takes equal width */
+        min-width: 0; /* Allows text to shrink when needed */
+    }
+
+  
+    .align-left {
+        text-align: left;
+    }
+
+    .footer-column:nth-child(2) { /* The Middle Column (Follow Us) */
+        text-align: center;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    /* Makes it small enough to fit 3 columns on a phone */
+    .footer-column h4 {
+        font-size: 0.9rem ; /* Smaller Headers */
+        margin-bottom: 0.5rem;
+        color: #E7A748;
+        white-space: nowrap; /* Stops the word "Contact Us" from breaking lines */
+    }
+
+    .footer-column p, 
+    .footer-column a {
+        font-size: 0.7rem ; /* Smaller Text */
+        line-height: 1.4;
+    }
+
+    /* Social Icons Adjustment */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 0.3rem; /* Tighter icon spacing */
+    }
+    
+    .social-icons img {
+        width: 18px; /* Smaller icons */
+        height: auto;
+    }
+    
+    .footer-bottom p {
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 1rem;
+        opacity: 0.8;
+    }
+
+
+    /* PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS */
+    .search-wrapper {
+        gap: 0rem;
+          }
+          .grid {
+        grid-template-columns: 1fr; /* 1 Column */
+        gap: 3rem;
+        padding: 2rem 1rem;
+        justify-items: center;
+    }
+
+    .card {
+        max-width: 280px;
+        background-color: #FDFBF7 ;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgbox {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card img {
+        width: auto;
+        height: 100%;
+        max-height: 280px;
+        object-fit: contain;
+        /* fixes squished images */
+    }
+    
+    .btn {
+        background-color: #8D2335;
+        color: #D8D0BC;
+        padding: 0.5rem 2rem;
+        border-radius: 8px;
+    }
+    .grid{
+       margin: 0rem; 
+    }
+    h1.HeadTitle{
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    main{
+        font-size: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    /* ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT */
+
+
+    /* 1. Main Content Spacing */
+    main {
+        padding: 0 1.5rem; /* Adding padding so text doesn't touch screen edges */
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. Titles */
+    .HeadTitle {
+        font-size: 2.2rem; /* Smaller title for mobile */
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #3F1C08;
+    }
+
+    /* 3. Paragraph Text */
+    main p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+
+    /* 4. The Image Container */
+    .aboutimg {
+        display: flex;
+        flex-direction: column; /* Stacking images vertically */
+        gap: 1.5rem;      /* Space between the two images */
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    /* 5. The Images Themselves */
+    .aboutimg img {
+        width: 100%;   /* Filling the width of the phone */
+        max-width: 350px;         
+        height: auto;
+        border-radius: 20px ;
+        margin: 0 auto;           /* Centers them */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* 6. Decorative Bottom Image */
+    .bottom-decor {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        opacity: 0.8;
+        margin-top: 2rem;
+    }
+    /* Our Journey Our Journey Our Journey Our Journey Our Journey Our Journey */
+
+
+    /* 1. Typography Adjustments */
+    .Journeycontainer {
+        padding: 0 1.5rem;
+        margin-top: 2rem;
+    }
+
+    h1.OurJourney {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: #3F1C08;
+    }
+
+    p.OJ {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    /* 2. The Image Container */
+    .image-collage {
+        display: flex;
+        flex-direction: column; /* Stacks vertically */
+        align-items: center;
+        gap: 2rem; /* Space between images */
+        margin-bottom: 4rem;
+        grid-template-columns: none; /* Disables the desktop grid */
+    }
+
+    /* 3. The bubble Shaped Images */
+    .image-collage img {
+        width: 80%;   
+        height: 400px; 
+        object-fit: cover; /* Ensures the image doesn't stretch */
+        border-radius: 200px; 
+        
+        /* Reset Desktop Styles */
+        grid-column: auto ;
+        transform: none ; 
+        margin: 0 ;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Removes the specific offset for the middle image on mobile */
+    .image-collage img:nth-child(2) {
+        transform: none ;
+        z-index: 1;
+    }
+    /* FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ FAQ */
+   
+
+    /* Container */
+    .faq {
+        width: 100%;
+        padding: 1rem 1.5rem; 
+        margin-top: 2rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the bubbles */
+    }
+
+    /* 2. question bubbles */
+    .faq-question {
+        margin: 0;      /* REMOVES the 35rem margin */
+        margin-bottom: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.8rem;
+        padding: 1rem;
+        line-height: 1.4;
+        text-align: center;
+        border-radius: 50px; 
+    }
+
+    /* 3. dropdownanswer */
+    .faq-item div[class^="faq-overlay"] {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #D8D0BC; 
+        text-align: center;
+        background: transparent; 
+    }
+    
+    /* 4. Ensure Full Page Background */
+    .FAQBODY {
+        min-height: 100vh;
+        overflow-x: hidden; /* Prevents side scrolling */
+    }
+}
