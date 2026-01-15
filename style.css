@@ -567,26 +567,15 @@ footer {
   border-radius: 40px;
 }
 
-/* Left image */
-/* :nth-child, new concept, basically because i want to overlap it will select first child element in the container, pseudo-class to select by postion not class or element */
-.image-collage img:nth-child(1) {
-  grid-column: 1 / 2;
-  /* start at line 1, end at line 2 */
-}
 
-/* Center image (taller + overlaps) */
+
+/* to select center to make a nice collage with offcenter  */
 .image-collage img:nth-child(2) {
-  grid-column: 2 / 3;
   transform: translateY(40px);
-  z-index: 2;
-  /* layers element on top */
-  height: 480px;
+
 }
 
-/* Right image */
-.image-collage img:nth-child(3) {
-  grid-column: 3 / 4;
-}
+
 /* ......... */
 /* FAQ PAGE */
 /* ......... */
